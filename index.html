@@ -1,0 +1,1612 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+        <style>
+.dataTables_wrapper .dataTables_filter {
+    position:sticky;
+    width:100%;
+    top: 0;
+    z-index: 1020; /* Higher than the table header to ensure it stays on top */
+    background-color: white; /* Ensure visibility against any background */
+    padding: 10px 0; /* Adjust padding as needed */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+p {
+
+  position:sticky;
+  z-index:100;
+  height:40px;
+  width:2300px;
+  top:0;
+  background-color: white;
+  padding: 10px 0; /* Adjust padding as needed */
+
+}
+
+table.dataTable thead th {
+    background-color: #017eff;
+    color: white;
+    position: sticky;
+    top: 52px; /* Adjust this value based on the height of your search bar */
+    z-index: 1010; /* Lower than the search bar but above the table rows */
+    padding: 10px 5px; /* Adjusted for thinner header */
+    padding-right: 30px; /* Extra space for sort icons */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+table.dataTable thead tr {
+    background-color: #017eff;
+    color: white;
+    top: 52px; /* Adjust this value based on the height of your search bar */
+    position: sticky;
+
+    z-index: 1010; /* Same z-index as the thead th for consistency */
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+/* Styling for sort icons to be white */
+table.dataTable thead .sorting::after,
+table.dataTable thead .sorting_asc::after,
+table.dataTable thead .sorting_desc::after,
+table.dataTable thead .sorting::before,
+table.dataTable thead .sorting_asc::before,
+table.dataTable thead .sorting_desc::before {
+    color: white !important;
+}
+
+table.dataTable tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Light grey color for odd rows */
+}
+
+table.dataTable tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White color for even rows */
+}
+
+table.dataTable tbody tr {
+    font-family: 'Roboto', sans-serif; /* Ensure rows use Roboto */
+}
+
+</style>
+<div id="place"></div>
+<p></p>
+<table id="T_1f94f" class="table table-striped" style="width:100%;">
+  <thead>
+    <tr>
+      <th id="T_1f94f_level0_col0" class="col_heading level0 col0" >AS Main Section</th>
+      <th id="T_1f94f_level0_col1" class="col_heading level0 col1" >AS Sub Section</th>
+      <th id="T_1f94f_level0_col2" class="col_heading level0 col2" >AS Field Container Value</th>
+      <th id="T_1f94f_level0_col3" class="col_heading level0 col3" >Field Description</th>
+      <th id="T_1f94f_level0_col4" class="col_heading level0 col4" >Section Search Group</th>
+      <th id="T_1f94f_level0_col5" class="col_heading level0 col5" >Sub Section Search Source Menu Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="T_1f94f_row0_col0" class="data row0 col0" >Top of Document</td>
+      <td id="T_1f94f_row0_col1" class="data row0 col1" >Top of Document</td>
+      <td id="T_1f94f_row0_col2" class="data row0 col2" >Global Dossier Link:
+
+Espacenet Link:</td>
+      <td id="T_1f94f_row0_col3" class="data row0 col3" >These are links toward the top of the Patent Document- they enable Users to find the original Patent logged in the USPTO’s Global Dossier or In the EPO’s espacenet reference of Global Patents. The links are underlined in blue on screen.</td>
+      <td id="T_1f94f_row0_col4" class="data row0 col4"   >--</td>
+      <td id="T_1f94f_row0_col5" class="data row0 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row1_col0" class="data row1 col0" >Top of Document</td>
+      <td id="T_1f94f_row1_col1" class="data row1 col1" >Top of Document</td>
+      <td id="T_1f94f_row1_col2" class="data row1 col2" >WITHDRAWN</td>
+      <td id="T_1f94f_row1_col3" class="data row1 col3" >A withdrawn patent refers to a patent application that has been removed from consideration by the applicant or the patent office before it is granted. The reasons for withdrawing a patent application can vary, including but not limited to:
+
+-The applicant decides not to pursue the patent anymore, possibly due to strategic reasons, changes in business direction, or financial constraints.
+
+-The applicant may wish to keep the invention a trade secret instead of making it public through the patent system.
+
+-Issues or deficiencies in the patent application that cannot be or are not worth correcting.
+
+-Discovery of prior art that renders the invention not novel or obvious, leading the applicant to conclude that the patent is unlikely to be granted.
+
+-Re-filing or consolidation of applications, where an applicant might withdraw an initial application in favor of a revised or more comprehensive application.
+
+-Once a patent application is withdrawn, it will not proceed to examination or grant. Depending on the jurisdiction's patent law, the details of a withdrawn application may or may not be made public, and the applicant might have the option to re-file the application at a later date, subject to certain conditions and limitations.</td>
+      <td id="T_1f94f_row1_col4" class="data row1 col4"   >--</td>
+      <td id="T_1f94f_row1_col5" class="data row1 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row2_col0" class="data row2 col0" >Abstract</td>
+      <td id="T_1f94f_row2_col1" class="data row2 col1" >Abstract</td>
+      <td id="T_1f94f_row2_col2" class="data row2 col2" >Abstract</td>
+      <td id="T_1f94f_row2_col3" class="data row2 col3" >A patent abstract is a brief summary of the technical information contained in a patent application, highlighting the invention's purpose, features, and potential applications. It serves as a quick reference to help readers understand the essence of the invention without delving into the detailed specifications.</td>
+      <td id="T_1f94f_row2_col4" class="data row2 col4" >Abstract</td>
+      <td id="T_1f94f_row2_col5" class="data row2 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row3_col0" class="data row3 col0" >Publication Summary</td>
+      <td id="T_1f94f_row3_col1" class="data row3 col1" >Publication Summary</td>
+      <td id="T_1f94f_row3_col2" class="data row3 col2" >Publication Status:</td>
+      <td id="T_1f94f_row3_col3" class="data row3 col3" >The publication status of a patent or patent application indicates its current phase in the patent process, such as pending, published, granted, or expired. It provides information on whether the application is still under examination, has been made public, has been officially issued as a patent, or its protection period has ended, making the invention part of the public domain.
+
+-Applications
+
+--Pending
+
+--Granted
+
+--Expired/Abandoned/Withdrawn/Ceased/Revoked
+
+-Patent Grants
+
+--Active/EP - In Force
+
+--Expired - Fee Related
+
+--Expired/EP- Not In Force/Withdrawn/Ceased/Revoked</td>
+      <td id="T_1f94f_row3_col4" class="data row3 col4"   >--</td>
+      <td id="T_1f94f_row3_col5" class="data row3 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row4_col0" class="data row4 col0" >Publication Summary</td>
+      <td id="T_1f94f_row4_col1" class="data row4 col1" >Publication Summary</td>
+      <td id="T_1f94f_row4_col2" class="data row4 col2" >Publication Type:</td>
+      <td id="T_1f94f_row4_col3" class="data row4 col3" >Application or Grant</td>
+      <td id="T_1f94f_row4_col4" class="data row4 col4"   >--</td>
+      <td id="T_1f94f_row4_col5" class="data row4 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row5_col0" class="data row5 col0" >Publication Summary</td>
+      <td id="T_1f94f_row5_col1" class="data row5 col1" >Publication Summary</td>
+      <td id="T_1f94f_row5_col2" class="data row5 col2" >Publication Kind Code:</td>
+      <td id="T_1f94f_row5_col3" class="data row5 col3" >A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent 
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular 
+
+</td>
+      <td id="T_1f94f_row5_col4" class="data row5 col4"   >--</td>
+      <td id="T_1f94f_row5_col5" class="data row5 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row6_col0" class="data row6 col0" >Publication Summary</td>
+      <td id="T_1f94f_row6_col1" class="data row6 col1" >Publication Summary</td>
+      <td id="T_1f94f_row6_col2" class="data row6 col2" >Publication Country:</td>
+      <td id="T_1f94f_row6_col3" class="data row6 col3" >Domicile / Office associated to the Patent</td>
+      <td id="T_1f94f_row6_col4" class="data row6 col4"   >--</td>
+      <td id="T_1f94f_row6_col5" class="data row6 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row7_col0" class="data row7 col0" >Publication Summary</td>
+      <td id="T_1f94f_row7_col1" class="data row7 col1" >Publication Summary</td>
+      <td id="T_1f94f_row7_col2" class="data row7 col2" >Publication Number:</td>
+      <td id="T_1f94f_row7_col3" class="data row7 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row7_col4" class="data row7 col4"   >--</td>
+      <td id="T_1f94f_row7_col5" class="data row7 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row8_col0" class="data row8 col0" >Publication Summary</td>
+      <td id="T_1f94f_row8_col1" class="data row8 col1" >Publication Summary</td>
+      <td id="T_1f94f_row8_col2" class="data row8 col2" >Publication Date:</td>
+      <td id="T_1f94f_row8_col3" class="data row8 col3" >Date displayed in Results panel, the publication date is when a patent application or granted patent is officially made public by the patent office. For applications, this date marks when the details of the invention are disclosed to the general public, typically 18 months after the filing or priority date. For granted patents, it's the date the patent is issued and the invention's protection begins.</td>
+      <td id="T_1f94f_row8_col4" class="data row8 col4"   >--</td>
+      <td id="T_1f94f_row8_col5" class="data row8 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row9_col0" class="data row9 col0" >Publication Summary</td>
+      <td id="T_1f94f_row9_col1" class="data row9 col1" >Publication Summary</td>
+      <td id="T_1f94f_row9_col2" class="data row9 col2" >Forecasted Expiration Date:</td>
+      <td id="T_1f94f_row9_col3" class="data row9 col3" >Date at which the Patent is expected to expire</td>
+      <td id="T_1f94f_row9_col4" class="data row9 col4"   >--</td>
+      <td id="T_1f94f_row9_col5" class="data row9 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row10_col0" class="data row10 col0" >Publication Summary</td>
+      <td id="T_1f94f_row10_col1" class="data row10 col1" >Publication Summary</td>
+      <td id="T_1f94f_row10_col2" class="data row10 col2" >Grant Date:</td>
+      <td id="T_1f94f_row10_col3" class="data row10 col3" >Day that the patent was granted, as applicable</td>
+      <td id="T_1f94f_row10_col4" class="data row10 col4"   >--</td>
+      <td id="T_1f94f_row10_col5" class="data row10 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row11_col0" class="data row11 col0" >Publication Summary</td>
+      <td id="T_1f94f_row11_col1" class="data row11 col1" >Publication Summary</td>
+      <td id="T_1f94f_row11_col2" class="data row11 col2" >Application Number:</td>
+      <td id="T_1f94f_row11_col3" class="data row11 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row11_col4" class="data row11 col4"   >--</td>
+      <td id="T_1f94f_row11_col5" class="data row11 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row12_col0" class="data row12 col0" >Publication Summary</td>
+      <td id="T_1f94f_row12_col1" class="data row12 col1" >Publication Summary</td>
+      <td id="T_1f94f_row12_col2" class="data row12 col2" >Application Filing Date:</td>
+      <td id="T_1f94f_row12_col3" class="data row12 col3" >Date Application was filed</td>
+      <td id="T_1f94f_row12_col4" class="data row12 col4"   >--</td>
+      <td id="T_1f94f_row12_col5" class="data row12 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row13_col0" class="data row13 col0" >Publication Summary</td>
+      <td id="T_1f94f_row13_col1" class="data row13 col1" >Publication Summary</td>
+      <td id="T_1f94f_row13_col2" class="data row13 col2" >Priority Date:</td>
+      <td id="T_1f94f_row13_col3" class="data row13 col3" >The patent priority date is the earliest filing date of a patent application in any patent office, which establishes the precedence for the invention's claim over others in the patent system. This date is crucial for determining the novelty and non-obviousness of the invention against prior art.</td>
+      <td id="T_1f94f_row13_col4" class="data row13 col4"   >--</td>
+      <td id="T_1f94f_row13_col5" class="data row13 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row14_col0" class="data row14 col0" >Publication Summary</td>
+      <td id="T_1f94f_row14_col1" class="data row14 col1" >Publication Summary</td>
+      <td id="T_1f94f_row14_col2" class="data row14 col2" >Family ID:</td>
+      <td id="T_1f94f_row14_col3" class="data row14 col3" >A family ID refers to a unique identifier assigned to a group of related patent applications and grants filed in multiple countries or jurisdictions, which all claim priority to the same original application or share a common priority. This concept helps in tracking and analyzing the global protection strategy for a specific invention.</td>
+      <td id="T_1f94f_row14_col4" class="data row14 col4"   >--</td>
+      <td id="T_1f94f_row14_col5" class="data row14 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row15_col0" class="data row15 col0" >Publication Summary</td>
+      <td id="T_1f94f_row15_col1" class="data row15 col1" >Publication Summary</td>
+      <td id="T_1f94f_row15_col2" class="data row15 col2" >Inventors:</td>
+      <td id="T_1f94f_row15_col3" class="data row15 col3" >Inventors listed on the Patent</td>
+      <td id="T_1f94f_row15_col4" class="data row15 col4"   >--</td>
+      <td id="T_1f94f_row15_col5" class="data row15 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row16_col0" class="data row16 col0" >Publication Summary</td>
+      <td id="T_1f94f_row16_col1" class="data row16 col1" >Publication Summary</td>
+      <td id="T_1f94f_row16_col2" class="data row16 col2" >Current Assignees:</td>
+      <td id="T_1f94f_row16_col3" class="data row16 col3" >Current Patent Owners</td>
+      <td id="T_1f94f_row16_col4" class="data row16 col4"   >--</td>
+      <td id="T_1f94f_row16_col5" class="data row16 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row17_col0" class="data row17 col0" >Publication Summary</td>
+      <td id="T_1f94f_row17_col1" class="data row17 col1" >Publication Summary</td>
+      <td id="T_1f94f_row17_col2" class="data row17 col2" >IPC Classifications:</td>
+      <td id="T_1f94f_row17_col3" class="data row17 col3" >The International Patent Classification (IPC) is a hierarchical system used worldwide to classify and categorize patents and patent applications according to different areas of technology to which they pertain. This system facilitates searching and referencing patents across international boundaries by providing a common language for patent classification.
+
+===
+
+https://ipcpub.wipo.int/?notion=scheme&version=20240101&symbol=none&menulang=en&lang=en&viewmode=f&fipcpc=no&showdeleted=yes&indexes=no&headings=yes&notes=yes&direction=o2n&initial=A&cwid=none&tree=no&searchmode=smart </td>
+      <td id="T_1f94f_row17_col4" class="data row17 col4"   >--</td>
+      <td id="T_1f94f_row17_col5" class="data row17 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row18_col0" class="data row18 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row18_col1" class="data row18 col1" >Publication Info</td>
+      <td id="T_1f94f_row18_col2" class="data row18 col2" >Publication Number</td>
+      <td id="T_1f94f_row18_col3" class="data row18 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row18_col4" class="data row18 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row18_col5" class="data row18 col5" >Publication Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row19_col0" class="data row19 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row19_col1" class="data row19 col1" >Publication Info</td>
+      <td id="T_1f94f_row19_col2" class="data row19 col2" >Publication Kind Code</td>
+      <td id="T_1f94f_row19_col3" class="data row19 col3" >A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular
+
+</td>
+      <td id="T_1f94f_row19_col4" class="data row19 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row19_col5" class="data row19 col5" >Publication Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row20_col0" class="data row20 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row20_col1" class="data row20 col1" >Publication Info</td>
+      <td id="T_1f94f_row20_col2" class="data row20 col2" >Publication Date</td>
+      <td id="T_1f94f_row20_col3" class="data row20 col3" >Date displayed in Results panel, the publication date is when a patent application or granted patent is officially made public by the patent office. For applications, this date marks when the details of the invention are disclosed to the general public, typically 18 months after the filing or priority date. For granted patents, it's the date the patent is issued and the invention's protection begins.</td>
+      <td id="T_1f94f_row20_col4" class="data row20 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row20_col5" class="data row20 col5" >Publication Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row21_col0" class="data row21 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row21_col1" class="data row21 col1" >Publication Info</td>
+      <td id="T_1f94f_row21_col2" class="data row21 col2" >Publication Country</td>
+      <td id="T_1f94f_row21_col3" class="data row21 col3" >Domicile / Office associated to the Patent</td>
+      <td id="T_1f94f_row21_col4" class="data row21 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row21_col5" class="data row21 col5" >Publication Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row22_col0" class="data row22 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row22_col1" class="data row22 col1" >Publication Info</td>
+      <td id="T_1f94f_row22_col2" class="data row22 col2" >Publication Unique ID</td>
+      <td id="T_1f94f_row22_col3" class="data row22 col3" >Effectively the publication reference number of the publication</td>
+      <td id="T_1f94f_row22_col4" class="data row22 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row22_col5" class="data row22 col5" >Publication Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row23_col0" class="data row23 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row23_col1" class="data row23 col1" >Status & Expiration</td>
+      <td id="T_1f94f_row23_col2" class="data row23 col2" >Status</td>
+      <td id="T_1f94f_row23_col3" class="data row23 col3" >The publication status of a patent or patent application indicates its current phase in the patent process, such as pending, published, granted, or expired. It provides information on whether the application is still under examination, has been made public, has been officially issued as a patent, or its protection period has ended, making the invention part of the public domain.
+
+-Applications
+
+--Pending
+
+--Granted
+
+--Expired/Abandoned/Withdrawn/Ceased/Revoked
+
+-Patent Grants
+
+--Active/EP - In Force
+
+--Expired - Fee Related
+
+--Expired/EP- Not In Force/Withdrawn/Ceased/Revoked</td>
+      <td id="T_1f94f_row23_col4" class="data row23 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row23_col5" class="data row23 col5" >Status & Expiration</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row24_col0" class="data row24 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row24_col1" class="data row24 col1" >Status & Expiration</td>
+      <td id="T_1f94f_row24_col2" class="data row24 col2" >Original Forecasted Expiration Date</td>
+      <td id="T_1f94f_row24_col3" class="data row24 col3" >Date at which the Patent is originally expected to expire</td>
+      <td id="T_1f94f_row24_col4" class="data row24 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row24_col5" class="data row24 col5" >Status & Expiration</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row25_col0" class="data row25 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row25_col1" class="data row25 col1" >Status & Expiration</td>
+      <td id="T_1f94f_row25_col2" class="data row25 col2" >Forecasted Expiration</td>
+      <td id="T_1f94f_row25_col3" class="data row25 col3" >Date at which the Patent is expected to expire</td>
+      <td id="T_1f94f_row25_col4" class="data row25 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row25_col5" class="data row25 col5" >Status & Expiration</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row26_col0" class="data row26 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row26_col1" class="data row26 col1" >Status & Expiration</td>
+      <td id="T_1f94f_row26_col2" class="data row26 col2" >Regulatory Extension</td>
+      <td id="T_1f94f_row26_col3" class="data row26 col3" >"Yes" when true. This field appears in records when exploitation of a patent is delayed by regulatory review (e.g., FDA review) or in other patents when a Supplementary Protection Certificate (SPC) has been issued for a patent.
+
+In the US, “Yes” may also indicate that an interim extension has been granted (PEDS code PTEI). If a PTE Certificate is not issued, the extension will not be reflected in the office specific data container. </td>
+      <td id="T_1f94f_row26_col4" class="data row26 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row26_col5" class="data row26 col5" >Status & Expiration</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row27_col0" class="data row27 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row27_col1" class="data row27 col1" >Status & Expiration</td>
+      <td id="T_1f94f_row27_col2" class="data row27 col2" >Status Country</td>
+      <td id="T_1f94f_row27_col3" class="data row27 col3" >Domicile / Office associated to the listed Patent Status</td>
+      <td id="T_1f94f_row27_col4" class="data row27 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row27_col5" class="data row27 col5" >Status & Expiration</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row28_col0" class="data row28 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row28_col1" class="data row28 col1" >Term of Grant</td>
+      <td id="T_1f94f_row28_col2" class="data row28 col2" >Term of Grant:</td>
+      <td id="T_1f94f_row28_col3" class="data row28 col3" >How long the patent will be enforced</td>
+      <td id="T_1f94f_row28_col4" class="data row28 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row28_col5" class="data row28 col5" >Term of Grant</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row29_col0" class="data row29 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row29_col1" class="data row29 col1" >Term of Grant</td>
+      <td id="T_1f94f_row29_col2" class="data row29 col2" >Term Extension:</td>
+      <td id="T_1f94f_row29_col3" class="data row29 col3" >Indicates that the term of the patent has been extended under 35 USC 154(b) or 35 USC 156.
+
+Example: 5 years
+[FR:n] days
+</td>
+      <td id="T_1f94f_row29_col4" class="data row29 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row29_col5" class="data row29 col5" >Term of Grant</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row30_col0" class="data row30 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row30_col1" class="data row30 col1" >Term of Grant</td>
+      <td id="T_1f94f_row30_col2" class="data row30 col2" >Terminal Disclaimer:</td>
+      <td id="T_1f94f_row30_col3" class="data row30 col3" >A terminal disclaimer allows the patent owner to disclaim or dedicate to the public the entire term or some portion of the term of a patent, usually to overcome a double-patenting objection. Only terminal disclaimers filed before issuances are included. The specific text associated with the disclaimer must be consulted to determine the extent of the disclaimer.
+
+"Yes" when a notice of terminal disclaimer is present. For US pre-2001, the adjusted-expiration date may incorporate a terminal disclaimer; post-2000, the adjusted date does not include the effect of a terminal disclaimer.
+</td>
+      <td id="T_1f94f_row30_col4" class="data row30 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row30_col5" class="data row30 col5" >Term of Grant</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row31_col0" class="data row31 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row31_col1" class="data row31 col1" >Term of Grant</td>
+      <td id="T_1f94f_row31_col2" class="data row31 col2" >Terminal Disclaimer Note:</td>
+      <td id="T_1f94f_row31_col3" class="data row31 col3" >A terminal disclaimer allows the patent owner to disclaim or dedicate to the public the entire term or some portion of the term of a patent, usually to overcome a double-patenting objection. Only terminal disclaimers filed before issuances are included. The specific text associated with the disclaimer must be consulted to determine the extent of the disclaimer.
+
+Fixed text: "This patent is subject to a terminal disclaimer."</td>
+      <td id="T_1f94f_row31_col4" class="data row31 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row31_col5" class="data row31 col5" >Term of Grant</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row32_col0" class="data row32 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row32_col1" class="data row32 col1" >Term of Grant</td>
+      <td id="T_1f94f_row32_col2" class="data row32 col2" >Terminal Disclaimer Date:</td>
+      <td id="T_1f94f_row32_col3" class="data row32 col3" >Action date of the Term of Grant (YYYYMMDD)</td>
+      <td id="T_1f94f_row32_col4" class="data row32 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row32_col5" class="data row32 col5" >Term of Grant</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row33_col0" class="data row33 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row33_col1" class="data row33 col1" >Inventors</td>
+      <td id="T_1f94f_row33_col2" class="data row33 col2" >Inventors</td>
+      <td id="T_1f94f_row33_col3" class="data row33 col3" >Inventors listed on the Patent</td>
+      <td id="T_1f94f_row33_col4" class="data row33 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row33_col5" class="data row33 col5" >Inventors</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row34_col0" class="data row34 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row34_col1" class="data row34 col1" >Assignees</td>
+      <td id="T_1f94f_row34_col2" class="data row34 col2" >Current Assignees</td>
+      <td id="T_1f94f_row34_col3" class="data row34 col3" >Current Owners of the Patent</td>
+      <td id="T_1f94f_row34_col4" class="data row34 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row34_col5" class="data row34 col5" >Assignees</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row35_col0" class="data row35 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row35_col1" class="data row35 col1" >Assignees</td>
+      <td id="T_1f94f_row35_col2" class="data row35 col2" >Original Assignees</td>
+      <td id="T_1f94f_row35_col3" class="data row35 col3" >Original Owners of the Patent</td>
+      <td id="T_1f94f_row35_col4" class="data row35 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row35_col5" class="data row35 col5" >Assignees</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row36_col0" class="data row36 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row36_col1" class="data row36 col1" >Assignees</td>
+      <td id="T_1f94f_row36_col2" class="data row36 col2" >Current Assignee Country</td>
+      <td id="T_1f94f_row36_col3" class="data row36 col3" >Domicile / Office associated to the Current Assignee</td>
+      <td id="T_1f94f_row36_col4" class="data row36 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row36_col5" class="data row36 col5" >Assignees</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row37_col0" class="data row37 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row37_col1" class="data row37 col1" >Assignees</td>
+      <td id="T_1f94f_row37_col2" class="data row37 col2" >Original Assignee Country</td>
+      <td id="T_1f94f_row37_col3" class="data row37 col3" >Domicile / Office associated to the Original Assignee</td>
+      <td id="T_1f94f_row37_col4" class="data row37 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row37_col5" class="data row37 col5" >Assignees</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row38_col0" class="data row38 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row38_col1" class="data row38 col1" >Applicants</td>
+      <td id="T_1f94f_row38_col2" class="data row38 col2" >Applicants</td>
+      <td id="T_1f94f_row38_col3" class="data row38 col3" >"Applicants" in the context of patents refer to the individuals or entities that file a patent application to obtain legal protection for an invention. Applicants can be inventors themselves, corporations, universities, or other organizations seeking to secure exclusive rights to use, manufacture, sell, or license the invention.</td>
+      <td id="T_1f94f_row38_col4" class="data row38 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row38_col5" class="data row38 col5" >Applicants</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row39_col0" class="data row39 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row39_col1" class="data row39 col1" >Applicants</td>
+      <td id="T_1f94f_row39_col2" class="data row39 col2" >Applicant Country</td>
+      <td id="T_1f94f_row39_col3" class="data row39 col3" >Domicile / Office associated to the Applicant</td>
+      <td id="T_1f94f_row39_col4" class="data row39 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row39_col5" class="data row39 col5" >Applicants</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row40_col0" class="data row40 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row40_col1" class="data row40 col1" >Application Info</td>
+      <td id="T_1f94f_row40_col2" class="data row40 col2" >Application Number</td>
+      <td id="T_1f94f_row40_col3" class="data row40 col3" >Filing number for the Application in the associated Patent Office</td>
+      <td id="T_1f94f_row40_col4" class="data row40 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row40_col5" class="data row40 col5" >Application Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row41_col0" class="data row41 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row41_col1" class="data row41 col1" >Application Info</td>
+      <td id="T_1f94f_row41_col2" class="data row41 col2" >Application Number Format</td>
+      <td id="T_1f94f_row41_col3" class="data row41 col3" >Format of the number in terms of Patent Office association</td>
+      <td id="T_1f94f_row41_col4" class="data row41 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row41_col5" class="data row41 col5" >Application Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row42_col0" class="data row42 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row42_col1" class="data row42 col1" >Application Info</td>
+      <td id="T_1f94f_row42_col2" class="data row42 col2" >Application Kind Code</td>
+      <td id="T_1f94f_row42_col3" class="data row42 col3" >Kind Code associated to the Application Patent
+
+A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular</td>
+      <td id="T_1f94f_row42_col4" class="data row42 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row42_col5" class="data row42 col5" >Application Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row43_col0" class="data row43 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row43_col1" class="data row43 col1" >Application Info</td>
+      <td id="T_1f94f_row43_col2" class="data row43 col2" >Filing Date</td>
+      <td id="T_1f94f_row43_col3" class="data row43 col3" >Date Application was filed</td>
+      <td id="T_1f94f_row43_col4" class="data row43 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row43_col5" class="data row43 col5" >Application Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row44_col0" class="data row44 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row44_col1" class="data row44 col1" >Application Info</td>
+      <td id="T_1f94f_row44_col2" class="data row44 col2" >Application Country</td>
+      <td id="T_1f94f_row44_col3" class="data row44 col3" >Domicile / Office associated to the Patent</td>
+      <td id="T_1f94f_row44_col4" class="data row44 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row44_col5" class="data row44 col5" >Application Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row45_col0" class="data row45 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row45_col1" class="data row45 col1" >Application Info</td>
+      <td id="T_1f94f_row45_col2" class="data row45 col2" >Application Unique ID</td>
+      <td id="T_1f94f_row45_col3" class="data row45 col3" >Effectively the publication reference number of the application</td>
+      <td id="T_1f94f_row45_col4" class="data row45 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row45_col5" class="data row45 col5" >Application Info</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row46_col0" class="data row46 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row46_col1" class="data row46 col1" >Designation States</td>
+      <td id="T_1f94f_row46_col2" class="data row46 col2" >PCT Designated States:</td>
+      <td id="T_1f94f_row46_col3" class="data row46 col3" >PCT states designated by the applicant. Often the applicant will select to include all member states.
+
+https://www.wipo.int/pct/en/pct_contracting_states.html</td>
+      <td id="T_1f94f_row46_col4" class="data row46 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row46_col5" class="data row46 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row47_col0" class="data row47 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row47_col1" class="data row47 col1" >Designation States</td>
+      <td id="T_1f94f_row47_col2" class="data row47 col2" >PCT Designation Regions:</td>
+      <td id="T_1f94f_row47_col3" class="data row47 col3" >When the designation is via a regional patent office, the region is specified with the country codes (PCT only).</td>
+      <td id="T_1f94f_row47_col4" class="data row47 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row47_col5" class="data row47 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row48_col0" class="data row48 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row48_col1" class="data row48 col1" >Designation States</td>
+      <td id="T_1f94f_row48_col2" class="data row48 col2" >EP Contracting States:</td>
+      <td id="T_1f94f_row48_col3" class="data row48 col3" >EP member states at time of filing or those designated by the applicant.</td>
+      <td id="T_1f94f_row48_col4" class="data row48 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row48_col5" class="data row48 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row49_col0" class="data row49 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row49_col1" class="data row49 col1" >Designation States</td>
+      <td id="T_1f94f_row49_col2" class="data row49 col2" >EP Validation States:</td>
+      <td id="T_1f94f_row49_col3" class="data row49 col3" >Non-member states which have a validation agreement with the EPO (e.g. MA, MD, TN, KH etc.), different from states which went through the post-grant validation process. See details here: https://www.epo.org/about-us/foundation/validation-states.html. </td>
+      <td id="T_1f94f_row49_col4" class="data row49 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row49_col5" class="data row49 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row50_col0" class="data row50 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row50_col1" class="data row50 col1" >Designation States</td>
+      <td id="T_1f94f_row50_col2" class="data row50 col2" >EP Participating States:</td>
+      <td id="T_1f94f_row50_col3" class="data row50 col3" >States participating in the Unitary Patent (UP). This element appears only in C0 records.</td>
+      <td id="T_1f94f_row50_col4" class="data row50 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row50_col5" class="data row50 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row51_col0" class="data row51 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row51_col1" class="data row51 col1" >Designation States</td>
+      <td id="T_1f94f_row51_col2" class="data row51 col2" >EP Extended States	</td>
+      <td id="T_1f94f_row51_col3" class="data row51 col3" >Non-member states which signed extension agreements with the EPO. Currently only includes BA. See details here: https://www.epo.org/about-us/foundation/extension-states.html. </td>
+      <td id="T_1f94f_row51_col4" class="data row51 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row51_col5" class="data row51 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row52_col0" class="data row52 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row52_col1" class="data row52 col1" >Designation States</td>
+      <td id="T_1f94f_row52_col2" class="data row52 col2" >EP Extended State Payment Date</td>
+      <td id="T_1f94f_row52_col3" class="data row52 col3" >The "EP Extended State Payment Date" refers to the date by which annual renewal fees were paid for a European patent (EP) in countries where the patent has been extended or validated outside the traditional member states of the European Patent Organisation. This includes countries that have extension or validation agreements with the EPO, allowing European patents to be recognized and enforced in those jurisdictions. Each extended state has its own regulations and deadlines for payment of these fees to maintain the validity of the patent within its territory. Failure to pay these fees by the specified date can lead to the patent lapsing in that country.</td>
+      <td id="T_1f94f_row52_col4" class="data row52 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row52_col5" class="data row52 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row53_col0" class="data row53 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row53_col1" class="data row53 col1" >Designation States</td>
+      <td id="T_1f94f_row53_col2" class="data row53 col2" >Withdrawal Date</td>
+      <td id="T_1f94f_row53_col3" class="data row53 col3" >The request for extension may be withdrawn at any time. It will be deemed withdrawn if the European patent application or the Euro-PCT application is finally refused, withdrawn, or deemed withdrawn.</td>
+      <td id="T_1f94f_row53_col4" class="data row53 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row53_col5" class="data row53 col5" >Desgination States</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row54_col0" class="data row54 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row54_col1" class="data row54 col1" >Agents</td>
+      <td id="T_1f94f_row54_col2" class="data row54 col2" >Agents</td>
+      <td id="T_1f94f_row54_col3" class="data row54 col3" >Legal Associates assisting the Patent Applicant, Inventor, or Assignee</td>
+      <td id="T_1f94f_row54_col4" class="data row54 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row54_col5" class="data row54 col5" >Agents</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row55_col0" class="data row55 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row55_col1" class="data row55 col1" >Agents</td>
+      <td id="T_1f94f_row55_col2" class="data row55 col2" >Agent Country</td>
+      <td id="T_1f94f_row55_col3" class="data row55 col3" >Domicile / Office associated to the Patent Agent</td>
+      <td id="T_1f94f_row55_col4" class="data row55 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row55_col5" class="data row55 col5" >Agents</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row56_col0" class="data row56 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row56_col1" class="data row56 col1" >Priority Claims</td>
+      <td id="T_1f94f_row56_col2" class="data row56 col2" >Priority Document Number</td>
+      <td id="T_1f94f_row56_col3" class="data row56 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row56_col4" class="data row56 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row56_col5" class="data row56 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row57_col0" class="data row57 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row57_col1" class="data row57 col1" >Priority Claims</td>
+      <td id="T_1f94f_row57_col2" class="data row57 col2" >Docuument Number Format</td>
+      <td id="T_1f94f_row57_col3" class="data row57 col3" >Format of the number in terms of Patent Office association</td>
+      <td id="T_1f94f_row57_col4" class="data row57 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row57_col5" class="data row57 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row58_col0" class="data row58 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row58_col1" class="data row58 col1" >Priority Claims</td>
+      <td id="T_1f94f_row58_col2" class="data row58 col2" >Linkage Type</td>
+      <td id="T_1f94f_row58_col3" class="data row58 col3" >An indicator of priority relation, this single character identifies priorities as division, continuation, or addition patents. See ANNEXX III of the DOCDB manual for a full listing of linkage types. https://www.epo.org/en/searching-for-patents/data/bulk-data-sets/manuals
+</td>
+      <td id="T_1f94f_row58_col4" class="data row58 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row58_col5" class="data row58 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row59_col0" class="data row59 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row59_col1" class="data row59 col1" >Priority Claims</td>
+      <td id="T_1f94f_row59_col2" class="data row59 col2" >Priority Kind Code</td>
+      <td id="T_1f94f_row59_col3" class="data row59 col3" >Kind Code associated to the Prioirty linked patent
+
+A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular</td>
+      <td id="T_1f94f_row59_col4" class="data row59 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row59_col5" class="data row59 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row60_col0" class="data row60 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row60_col1" class="data row60 col1" >Priority Claims</td>
+      <td id="T_1f94f_row60_col2" class="data row60 col2" >Priority Filing Date</td>
+      <td id="T_1f94f_row60_col3" class="data row60 col3" >FIling date of the associated linked Patent</td>
+      <td id="T_1f94f_row60_col4" class="data row60 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row60_col5" class="data row60 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row61_col0" class="data row61 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row61_col1" class="data row61 col1" >Priority Claims</td>
+      <td id="T_1f94f_row61_col2" class="data row61 col2" >Priority Country</td>
+      <td id="T_1f94f_row61_col3" class="data row61 col3" >Domicile / Office associated to the linked Patent</td>
+      <td id="T_1f94f_row61_col4" class="data row61 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row61_col5" class="data row61 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row62_col0" class="data row62 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row62_col1" class="data row62 col1" >Priority Claims</td>
+      <td id="T_1f94f_row62_col2" class="data row62 col2" >Priority Claim Unique ID</td>
+      <td id="T_1f94f_row62_col3" class="data row62 col3" >Effectively the publication reference number of the linked document</td>
+      <td id="T_1f94f_row62_col4" class="data row62 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row62_col5" class="data row62 col5" >Priority Claims</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row63_col0" class="data row63 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row63_col1" class="data row63 col1" >Classifications</td>
+      <td id="T_1f94f_row63_col2" class="data row63 col2" >IPC Main Classification:</td>
+      <td id="T_1f94f_row63_col3" class="data row63 col3" >The IPC Main Classification refers to the primary symbol assigned from the International Patent Classification (IPC) system, indicating the principal technology sector to which an invention belongs. This classification provides a standardized framework for categorizing patents based on their technical content, facilitating efficient search and analysis of patent information across different jurisdictions.</td>
+      <td id="T_1f94f_row63_col4" class="data row63 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row63_col5" class="data row63 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row64_col0" class="data row64 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row64_col1" class="data row64 col1" >Classifications</td>
+      <td id="T_1f94f_row64_col2" class="data row64 col2" >IPC Further Classification:</td>
+      <td id="T_1f94f_row64_col3" class="data row64 col3" >Additional IPC classifications applied</td>
+      <td id="T_1f94f_row64_col4" class="data row64 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row64_col5" class="data row64 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row65_col0" class="data row65 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row65_col1" class="data row65 col1" >Classifications</td>
+      <td id="T_1f94f_row65_col2" class="data row65 col2" >IPC Additional Info:</td>
+      <td id="T_1f94f_row65_col3" class="data row65 col3" >"IPC Additional Info" refers to supplementary details provided alongside the International Patent Classification (IPC) codes, offering further insight into the specific aspects or embodiments of the invention covered under a patent application. This additional information helps clarify the scope and focus of the invention, enhancing the precision of patent searches and the assessment of patentability.</td>
+      <td id="T_1f94f_row65_col4" class="data row65 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row65_col5" class="data row65 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row66_col0" class="data row66 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row66_col1" class="data row66 col1" >Classifications</td>
+      <td id="T_1f94f_row66_col2" class="data row66 col2" >Indexing Groups:</td>
+      <td id="T_1f94f_row66_col3" class="data row66 col3" >Indexing codes are used in association with classification symbols to provide technical information. Their format is similar to classification symbols, but they employ a colon in place of the slash. For example: ANNAnnnn:n[...]. Linked indexing codes show which classification symbols the indexing code is associated with. See Review of the Hybrid Systems in the IPC for more information. https://www.wipo.int/edocs/mdocs/classifications/en/ipc_ref_1/ipc_r_5_99.pdf</td>
+      <td id="T_1f94f_row66_col4" class="data row66 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row66_col5" class="data row66 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row67_col0" class="data row67 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row67_col1" class="data row67 col1" >Classifications</td>
+      <td id="T_1f94f_row67_col2" class="data row67 col2" >Indexing Codes:</td>
+      <td id="T_1f94f_row67_col3" class="data row67 col3" >Indexing codes are used in association with classification symbols to provide technical information. Their format is similar to classification symbols, but they employ a colon in place of the slash. For example: ANNAnnnn:n[...]. Linked indexing codes show which classification symbols the indexing code is associated with. See Review of the Hybrid Systems in the IPC for more information. https://www.wipo.int/edocs/mdocs/classifications/en/ipc_ref_1/ipc_r_5_99.pdf</td>
+      <td id="T_1f94f_row67_col4" class="data row67 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row67_col5" class="data row67 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row68_col0" class="data row68 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row68_col1" class="data row68 col1" >Classifications</td>
+      <td id="T_1f94f_row68_col2" class="data row68 col2" >IPCR Classification:</td>
+      <td id="T_1f94f_row68_col3" class="data row68 col3" >The IPCR Classification refers to the version of the International Patent Classification (IPCR) system used to categorize patents and patent applications according to their technical features and fields of invention. It stands for the Reformed International Patent Classification system, which incorporates more detailed and dynamic updates compared to the original IPC, allowing for a more precise and up-to-date classification of patents.</td>
+      <td id="T_1f94f_row68_col4" class="data row68 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row68_col5" class="data row68 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row69_col0" class="data row69 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row69_col1" class="data row69 col1" >Classifications</td>
+      <td id="T_1f94f_row69_col2" class="data row69 col2" >Locarno Main Classification:</td>
+      <td id="T_1f94f_row69_col3" class="data row69 col3" >The Locarno Classification, established by the Locarno Agreement (1968), is an international classification system for industrial designs. It is used for registering designs in countries that are parties to the Agreement. The system organizes designs into categories based on their purpose or function, facilitating the search and registration process by providing a uniform classification.
+
+https://www.wipo.int/classifications/locarno/en/ </td>
+      <td id="T_1f94f_row69_col4" class="data row69 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row69_col5" class="data row69 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row70_col0" class="data row70 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row70_col1" class="data row70 col1" >Classifications</td>
+      <td id="T_1f94f_row70_col2" class="data row70 col2" >Locarno Further Classification:</td>
+      <td id="T_1f94f_row70_col3" class="data row70 col3" >Additional Locarno classification details</td>
+      <td id="T_1f94f_row70_col4" class="data row70 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row70_col5" class="data row70 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row71_col0" class="data row71 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row71_col1" class="data row71 col1" >Classifications</td>
+      <td id="T_1f94f_row71_col2" class="data row71 col2" >[country code] National Main Classification:</td>
+      <td id="T_1f94f_row71_col3" class="data row71 col3" >Classification per associated Country / Office
+
+"EPO National Further Classification" for example. </td>
+      <td id="T_1f94f_row71_col4" class="data row71 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row71_col5" class="data row71 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row72_col0" class="data row72 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row72_col1" class="data row72 col1" >Classifications</td>
+      <td id="T_1f94f_row72_col2" class="data row72 col2" >[country code] National Further Classification:</td>
+      <td id="T_1f94f_row72_col3" class="data row72 col3" >Classification per associated Country / Office
+
+"EPO National Further Classification" for example. </td>
+      <td id="T_1f94f_row72_col4" class="data row72 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row72_col5" class="data row72 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row73_col0" class="data row73 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row73_col1" class="data row73 col1" >Classifications</td>
+      <td id="T_1f94f_row73_col2" class="data row73 col2" >F Term Themes:</td>
+      <td id="T_1f94f_row73_col3" class="data row73 col3" >F Term Themes are thematic categories within the Japanese patent classification system, organizing patents based on detailed technical features and aspects of inventions.</td>
+      <td id="T_1f94f_row73_col4" class="data row73 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row73_col5" class="data row73 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row74_col0" class="data row74 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row74_col1" class="data row74 col1" >Classifications</td>
+      <td id="T_1f94f_row74_col2" class="data row74 col2" >F Terms:</td>
+      <td id="T_1f94f_row74_col3" class="data row74 col3" >F-Terms are a part of the Japanese patent classification system, used alongside the International Patent Classification (IPC) system in Japan. They provide a highly detailed and nuanced indexing of patent documents based on technical features and facets of inventions. This system allows for precise searching and analysis of patent information, catering specifically to the unique aspects of technological advancements covered in patent filings.</td>
+      <td id="T_1f94f_row74_col4" class="data row74 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row74_col5" class="data row74 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row75_col0" class="data row75 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row75_col1" class="data row75 col1" >Classifications</td>
+      <td id="T_1f94f_row75_col2" class="data row75 col2" >CPC Classification:</td>
+      <td id="T_1f94f_row75_col3" class="data row75 col3" >The Cooperative Patent Classification (CPC) is a detailed patent classification system jointly developed by the European Patent Office (EPO) and the United States Patent and Trademark Office (USPTO). It is used for categorizing and searching patent documents according to specific technological areas, enhancing the efficiency and accuracy of patent searches globally.
+
+https://www.uspto.gov/web/patents/classification/cpc/html/cpc.html </td>
+      <td id="T_1f94f_row75_col4" class="data row75 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row75_col5" class="data row75 col5" >Classifications</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row76_col0" class="data row76 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row76_col1" class="data row76 col1" >Examiners</td>
+      <td id="T_1f94f_row76_col2" class="data row76 col2" >Examiner Department</td>
+      <td id="T_1f94f_row76_col3" class="data row76 col3" >The "Examiner Department" refers to the specific division or unit within a patent office tasked with examining patent applications. This department consists of patent examiners who are experts in various technical fields. They review applications to assess their compliance with legal requirements, including novelty, inventive step (non-obviousness), and industrial applicability. The department is responsible for conducting searches of existing technology (prior art), analyzing the patentability of the claimed invention, and communicating with applicants regarding the status of their applications. The organization and naming of examiner departments can vary between patent offices worldwide.</td>
+      <td id="T_1f94f_row76_col4" class="data row76 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row76_col5" class="data row76 col5" >Examiners</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row77_col0" class="data row77 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row77_col1" class="data row77 col1" >Examiners</td>
+      <td id="T_1f94f_row77_col2" class="data row77 col2" >Examiners</td>
+      <td id="T_1f94f_row77_col3" class="data row77 col3" >Patent Office inspector of Patent validity</td>
+      <td id="T_1f94f_row77_col4" class="data row77 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row77_col5" class="data row77 col5" >Examiners</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row78_col0" class="data row78 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row78_col1" class="data row78 col1" >Fields of Search</td>
+      <td id="T_1f94f_row78_col2" class="data row78 col2" >IPC Search Classification:</td>
+      <td id="T_1f94f_row78_col3" class="data row78 col3" >IPC search applied by examiners</td>
+      <td id="T_1f94f_row78_col4" class="data row78 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row78_col5" class="data row78 col5" >Fields of Search</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row79_col0" class="data row79 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row79_col1" class="data row79 col1" >Fields of Search</td>
+      <td id="T_1f94f_row79_col2" class="data row79 col2" >IPCR Search Classification:</td>
+      <td id="T_1f94f_row79_col3" class="data row79 col3" >IPCR search applied by examiners</td>
+      <td id="T_1f94f_row79_col4" class="data row79 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row79_col5" class="data row79 col5" >Fields of Search</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row80_col0" class="data row80 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row80_col1" class="data row80 col1" >Fields of Search</td>
+      <td id="T_1f94f_row80_col2" class="data row80 col2" >[country code] National Search Classification:</td>
+      <td id="T_1f94f_row80_col3" class="data row80 col3" >Classification per associated Country / Office
+
+"EPO National Further Classification" for example. </td>
+      <td id="T_1f94f_row80_col4" class="data row80 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row80_col5" class="data row80 col5" >Fields of Search</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row81_col0" class="data row81 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row81_col1" class="data row81 col1" >Fields of Search</td>
+      <td id="T_1f94f_row81_col2" class="data row81 col2" >CPC Search Classification:</td>
+      <td id="T_1f94f_row81_col3" class="data row81 col3" >Cooperative Patent Classification search applied by examiners</td>
+      <td id="T_1f94f_row81_col4" class="data row81 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row81_col5" class="data row81 col5" >Fields of Search</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row82_col0" class="data row82 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row82_col1" class="data row82 col1" >Fields of Search</td>
+      <td id="T_1f94f_row82_col2" class="data row82 col2" >Locarno Search Classification:</td>
+      <td id="T_1f94f_row82_col3" class="data row82 col3" >Locarno search applied by examiners</td>
+      <td id="T_1f94f_row82_col4" class="data row82 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row82_col5" class="data row82 col5" >Fields of Search</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row83_col0" class="data row83 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row83_col1" class="data row83 col1" >Search Report Data</td>
+      <td id="T_1f94f_row83_col2" class="data row83 col2" >Search Authority</td>
+      <td id="T_1f94f_row83_col3" class="data row83 col3" >Associated Patent Office</td>
+      <td id="T_1f94f_row83_col4" class="data row83 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row83_col5" class="data row83 col5" >Search Report Data</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row84_col0" class="data row84 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row84_col1" class="data row84 col1" >Search Report Data</td>
+      <td id="T_1f94f_row84_col2" class="data row84 col2" >Search Report Type</td>
+      <td id="T_1f94f_row84_col3" class="data row84 col3" >Determines layout of search report. Values include:
+
+epo-srep=Normal layout
+ep-Rule45partial=Pre-EPC 2000
+ep-Rule45declaration=Layout for declaration, no citations
+isr=International Search Report layout</td>
+      <td id="T_1f94f_row84_col4" class="data row84 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row84_col5" class="data row84 col5" >Search Report Data</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row85_col0" class="data row85 col0" >Bibliographic Data</td>
+      <td id="T_1f94f_row85_col1" class="data row85 col1" >Search Report Data</td>
+      <td id="T_1f94f_row85_col2" class="data row85 col2" >Produced Date</td>
+      <td id="T_1f94f_row85_col3" class="data row85 col3" >Date the Search report was produced</td>
+      <td id="T_1f94f_row85_col4" class="data row85 col4" >Bibliographic Data</td>
+      <td id="T_1f94f_row85_col5" class="data row85 col5" >Search Report Data</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row86_col0" class="data row86 col0" >Related Documents</td>
+      <td id="T_1f94f_row86_col1" class="data row86 col1" >Parent Filings</td>
+      <td id="T_1f94f_row86_col2" class="data row86 col2" >Parent Document Number</td>
+      <td id="T_1f94f_row86_col3" class="data row86 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row86_col4" class="data row86 col4" >Related Documents</td>
+      <td id="T_1f94f_row86_col5" class="data row86 col5" >Parent Filings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row87_col0" class="data row87 col0" >Related Documents</td>
+      <td id="T_1f94f_row87_col1" class="data row87 col1" >Parent Filings</td>
+      <td id="T_1f94f_row87_col2" class="data row87 col2" >Parent Kind Code</td>
+      <td id="T_1f94f_row87_col3" class="data row87 col3" >Kind Code associated to the Patent related patent
+
+A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular</td>
+      <td id="T_1f94f_row87_col4" class="data row87 col4" >Related Documents</td>
+      <td id="T_1f94f_row87_col5" class="data row87 col5" >Parent Filings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row88_col0" class="data row88 col0" >Related Documents</td>
+      <td id="T_1f94f_row88_col1" class="data row88 col1" >Parent Filings</td>
+      <td id="T_1f94f_row88_col2" class="data row88 col2" >Parent Relation</td>
+      <td id="T_1f94f_row88_col3" class="data row88 col3" >"Parent Relation" refers to the connection between a patent application and its preceding applications or filings from which it claims priority or derives. This relationship can indicate a continuation, divisional, or a continuation-in-part application in the patent family, where the "parent" is the earlier application, and the "child" is the subsequent application that builds upon or divides from the parent's disclosure. This term helps in tracking the evolution of patent filings and understanding the scope of protection sought over time.</td>
+      <td id="T_1f94f_row88_col4" class="data row88 col4" >Related Documents</td>
+      <td id="T_1f94f_row88_col5" class="data row88 col5" >Parent Filings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row89_col0" class="data row89 col0" >Related Documents</td>
+      <td id="T_1f94f_row89_col1" class="data row89 col1" >Parent Filings</td>
+      <td id="T_1f94f_row89_col2" class="data row89 col2" >Parent Filing Date</td>
+      <td id="T_1f94f_row89_col3" class="data row89 col3" >Filing date associated to the Parent Patent</td>
+      <td id="T_1f94f_row89_col4" class="data row89 col4" >Related Documents</td>
+      <td id="T_1f94f_row89_col5" class="data row89 col5" >Parent Filings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row90_col0" class="data row90 col0" >Related Documents</td>
+      <td id="T_1f94f_row90_col1" class="data row90 col1" >Parent Filings</td>
+      <td id="T_1f94f_row90_col2" class="data row90 col2" >Parent Country</td>
+      <td id="T_1f94f_row90_col3" class="data row90 col3" >Domicile / Office associated to the Parent Patent</td>
+      <td id="T_1f94f_row90_col4" class="data row90 col4" >Related Documents</td>
+      <td id="T_1f94f_row90_col5" class="data row90 col5" >Parent Filings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row91_col0" class="data row91 col0" >Related Documents</td>
+      <td id="T_1f94f_row91_col1" class="data row91 col1" >Parent Filings</td>
+      <td id="T_1f94f_row91_col2" class="data row91 col2" >Parent Unique ID</td>
+      <td id="T_1f94f_row91_col3" class="data row91 col3" >Effectively the publication reference number of the parent document</td>
+      <td id="T_1f94f_row91_col4" class="data row91 col4" >Related Documents</td>
+      <td id="T_1f94f_row91_col5" class="data row91 col5" >Parent Filings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row92_col0" class="data row92 col0" >Related Documents</td>
+      <td id="T_1f94f_row92_col1" class="data row92 col1" >Child FIlings</td>
+      <td id="T_1f94f_row92_col2" class="data row92 col2" >Child Document Number</td>
+      <td id="T_1f94f_row92_col3" class="data row92 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row92_col4" class="data row92 col4" >Related Documents</td>
+      <td id="T_1f94f_row92_col5" class="data row92 col5" >Child FIlings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row93_col0" class="data row93 col0" >Related Documents</td>
+      <td id="T_1f94f_row93_col1" class="data row93 col1" >Child FIlings</td>
+      <td id="T_1f94f_row93_col2" class="data row93 col2" >Child Kind Code</td>
+      <td id="T_1f94f_row93_col3" class="data row93 col3" >Kind Code associated to the child related patent
+
+A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular</td>
+      <td id="T_1f94f_row93_col4" class="data row93 col4" >Related Documents</td>
+      <td id="T_1f94f_row93_col5" class="data row93 col5" >Child FIlings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row94_col0" class="data row94 col0" >Related Documents</td>
+      <td id="T_1f94f_row94_col1" class="data row94 col1" >Child FIlings</td>
+      <td id="T_1f94f_row94_col2" class="data row94 col2" >Child Relation</td>
+      <td id="T_1f94f_row94_col3" class="data row94 col3" >In the context of patents, a "child" refers to a subsequent patent application that is related to, and directly stems from, a previous application (referred to as the "parent"). Child applications can be continuations, divisionals, or continuation-in-part applications, each seeking to extend, divide, or modify the scope of the original invention disclosed in the parent application. These relationships form part of a patent family, showing the development and expansion of an invention's protection over time.</td>
+      <td id="T_1f94f_row94_col4" class="data row94 col4" >Related Documents</td>
+      <td id="T_1f94f_row94_col5" class="data row94 col5" >Child FIlings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row95_col0" class="data row95 col0" >Related Documents</td>
+      <td id="T_1f94f_row95_col1" class="data row95 col1" >Child FIlings</td>
+      <td id="T_1f94f_row95_col2" class="data row95 col2" >Child Filing Date</td>
+      <td id="T_1f94f_row95_col3" class="data row95 col3" >Date Application was filed for the associated child Patent</td>
+      <td id="T_1f94f_row95_col4" class="data row95 col4" >Related Documents</td>
+      <td id="T_1f94f_row95_col5" class="data row95 col5" >Child FIlings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row96_col0" class="data row96 col0" >Related Documents</td>
+      <td id="T_1f94f_row96_col1" class="data row96 col1" >Child FIlings</td>
+      <td id="T_1f94f_row96_col2" class="data row96 col2" >Child Country</td>
+      <td id="T_1f94f_row96_col3" class="data row96 col3" >Domicile / Office associated to the Child Patent</td>
+      <td id="T_1f94f_row96_col4" class="data row96 col4" >Related Documents</td>
+      <td id="T_1f94f_row96_col5" class="data row96 col5" >Child FIlings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row97_col0" class="data row97 col0" >Related Documents</td>
+      <td id="T_1f94f_row97_col1" class="data row97 col1" >Child FIlings</td>
+      <td id="T_1f94f_row97_col2" class="data row97 col2" >Child Unique ID</td>
+      <td id="T_1f94f_row97_col3" class="data row97 col3" >Effectively the publication reference number of the child document</td>
+      <td id="T_1f94f_row97_col4" class="data row97 col4" >Related Documents</td>
+      <td id="T_1f94f_row97_col5" class="data row97 col5" >Child FIlings</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row98_col0" class="data row98 col0" >Related Documents</td>
+      <td id="T_1f94f_row98_col1" class="data row98 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row98_col2" class="data row98 col2" >PCT/Regional Document Number</td>
+      <td id="T_1f94f_row98_col3" class="data row98 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row98_col4" class="data row98 col4" >Related Documents</td>
+      <td id="T_1f94f_row98_col5" class="data row98 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row99_col0" class="data row99 col0" >Related Documents</td>
+      <td id="T_1f94f_row99_col1" class="data row99 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row99_col2" class="data row99 col2" >PCT/Regional Kind Code</td>
+      <td id="T_1f94f_row99_col3" class="data row99 col3" >Kind Code associated to the PCT Linked Patent
+
+A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular</td>
+      <td id="T_1f94f_row99_col4" class="data row99 col4" >Related Documents</td>
+      <td id="T_1f94f_row99_col5" class="data row99 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row100_col0" class="data row100 col0" >Related Documents</td>
+      <td id="T_1f94f_row100_col1" class="data row100 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row100_col2" class="data row100 col2" >National Entry Date</td>
+      <td id="T_1f94f_row100_col3" class="data row100 col3" >Date of entry into national phase</td>
+      <td id="T_1f94f_row100_col4" class="data row100 col4" >Related Documents</td>
+      <td id="T_1f94f_row100_col5" class="data row100 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row101_col0" class="data row101 col0" >Related Documents</td>
+      <td id="T_1f94f_row101_col1" class="data row101 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row101_col2" class="data row101 col2" >PCT/Regional Filing Date</td>
+      <td id="T_1f94f_row101_col3" class="data row101 col3" >FIling date of the associated linked Patent</td>
+      <td id="T_1f94f_row101_col4" class="data row101 col4" >Related Documents</td>
+      <td id="T_1f94f_row101_col5" class="data row101 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row102_col0" class="data row102 col0" >Related Documents</td>
+      <td id="T_1f94f_row102_col1" class="data row102 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row102_col2" class="data row102 col2" >PCT/Regional Published Date</td>
+      <td id="T_1f94f_row102_col3" class="data row102 col3" >Date the PCT associated Patent was Published</td>
+      <td id="T_1f94f_row102_col4" class="data row102 col4" >Related Documents</td>
+      <td id="T_1f94f_row102_col5" class="data row102 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row103_col0" class="data row103 col0" >Related Documents</td>
+      <td id="T_1f94f_row103_col1" class="data row103 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row103_col2" class="data row103 col2" >PCT/Regional Country</td>
+      <td id="T_1f94f_row103_col3" class="data row103 col3" >Domicile / Office associated to the linked Patent</td>
+      <td id="T_1f94f_row103_col4" class="data row103 col4" >Related Documents</td>
+      <td id="T_1f94f_row103_col5" class="data row103 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row104_col0" class="data row104 col0" >Related Documents</td>
+      <td id="T_1f94f_row104_col1" class="data row104 col1" >PCT & Regional Links</td>
+      <td id="T_1f94f_row104_col2" class="data row104 col2" >PCT/Regional Unique ID</td>
+      <td id="T_1f94f_row104_col3" class="data row104 col3" >Effectively the publication reference number of the linked document</td>
+      <td id="T_1f94f_row104_col4" class="data row104 col4" >Related Documents</td>
+      <td id="T_1f94f_row104_col5" class="data row104 col5" >PCT & Regional Links</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row105_col0" class="data row105 col0" >Claims</td>
+      <td id="T_1f94f_row105_col1" class="data row105 col1" >Claims</td>
+      <td id="T_1f94f_row105_col2" class="data row105 col2" >Claim Number:</td>
+      <td id="T_1f94f_row105_col3" class="data row105 col3" >Number of the claim given</td>
+      <td id="T_1f94f_row105_col4" class="data row105 col4" >Claims</td>
+      <td id="T_1f94f_row105_col5" class="data row105 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row106_col0" class="data row106 col0" >Claims</td>
+      <td id="T_1f94f_row106_col1" class="data row106 col1" >Claims</td>
+      <td id="T_1f94f_row106_col2" class="data row106 col2" >Claim:</td>
+      <td id="T_1f94f_row106_col3" class="data row106 col3" >In patent terminology, a "claim" defines the boundary of the invention's protection granted by a patent. It specifies the technical features that the inventor or applicant considers to be new and inventive, essentially detailing what is covered by the patent rights. Claims are critical in determining the scope of the patent and are carefully scrutinized during patent examination and enforcement.</td>
+      <td id="T_1f94f_row106_col4" class="data row106 col4" >Claims</td>
+      <td id="T_1f94f_row106_col5" class="data row106 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row107_col0" class="data row107 col0" >Claims</td>
+      <td id="T_1f94f_row107_col1" class="data row107 col1" >Amended Claims</td>
+      <td id="T_1f94f_row107_col2" class="data row107 col2" >Amended Claims Note:</td>
+      <td id="T_1f94f_row107_col3" class="data row107 col3" >Any note about the amendement to the claim</td>
+      <td id="T_1f94f_row107_col4" class="data row107 col4" >Claims</td>
+      <td id="T_1f94f_row107_col5" class="data row107 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row108_col0" class="data row108 col0" >Claims</td>
+      <td id="T_1f94f_row108_col1" class="data row108 col1" >Amended Claims</td>
+      <td id="T_1f94f_row108_col2" class="data row108 col2" >Amended Claim Number:</td>
+      <td id="T_1f94f_row108_col3" class="data row108 col3" >The number of the amdended claim</td>
+      <td id="T_1f94f_row108_col4" class="data row108 col4" >Claims</td>
+      <td id="T_1f94f_row108_col5" class="data row108 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row109_col0" class="data row109 col0" >Claims</td>
+      <td id="T_1f94f_row109_col1" class="data row109 col1" >Amended Claims</td>
+      <td id="T_1f94f_row109_col2" class="data row109 col2" >Amended Claim:</td>
+      <td id="T_1f94f_row109_col3" class="data row109 col3" >The amended claim itself</td>
+      <td id="T_1f94f_row109_col4" class="data row109 col4" >Claims</td>
+      <td id="T_1f94f_row109_col5" class="data row109 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row110_col0" class="data row110 col0" >Description</td>
+      <td id="T_1f94f_row110_col1" class="data row110 col1" >Description</td>
+      <td id="T_1f94f_row110_col2" class="data row110 col2" >Description</td>
+      <td id="T_1f94f_row110_col3" class="data row110 col3" >The patent description, often referred to as the specification, is a detailed written document within a patent application that fully discloses the invention to the public. It provides a comprehensive explanation of the invention, its operation, and how it is made and used, offering enough detail for a person skilled in the relevant field to replicate the invention. The description must conclude with one or more claims that specifically highlight the novel aspects of the invention for which protection is sought. This part of the patent application is crucial for understanding the scope and breadth of the invention and its potential applications.</td>
+      <td id="T_1f94f_row110_col4" class="data row110 col4" >Description</td>
+      <td id="T_1f94f_row110_col5" class="data row110 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row111_col0" class="data row111 col0" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row111_col1" class="data row111 col1" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row111_col2" class="data row111 col2" >Ingredient</td>
+      <td id="T_1f94f_row111_col3" class="data row111 col3" >Active ingredient of a pharmaceutical product</td>
+      <td id="T_1f94f_row111_col4" class="data row111 col4" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row111_col5" class="data row111 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row112_col0" class="data row112 col0" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row112_col1" class="data row112 col1" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row112_col2" class="data row112 col2" >Brand</td>
+      <td id="T_1f94f_row112_col3" class="data row112 col3" >Brand name under which a pharmaceutical product is marketed</td>
+      <td id="T_1f94f_row112_col4" class="data row112 col4" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row112_col5" class="data row112 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row113_col0" class="data row113 col0" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row113_col1" class="data row113 col1" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row113_col2" class="data row113 col2" >Strength</td>
+      <td id="T_1f94f_row113_col3" class="data row113 col3" >Amount of active ingredient in each dosage</td>
+      <td id="T_1f94f_row113_col4" class="data row113 col4" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row113_col5" class="data row113 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row114_col0" class="data row114 col0" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row114_col1" class="data row114 col1" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row114_col2" class="data row114 col2" >Form</td>
+      <td id="T_1f94f_row114_col3" class="data row114 col3" >Form in which a pharmaceutical product is provided</td>
+      <td id="T_1f94f_row114_col4" class="data row114 col4" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row114_col5" class="data row114 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row115_col0" class="data row115 col0" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row115_col1" class="data row115 col1" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row115_col2" class="data row115 col2" >Route</td>
+      <td id="T_1f94f_row115_col3" class="data row115 col3" >Method of administration</td>
+      <td id="T_1f94f_row115_col4" class="data row115 col4" >Pharmaceutical Data</td>
+      <td id="T_1f94f_row115_col5" class="data row115 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row116_col0" class="data row116 col0" >Patent Citations</td>
+      <td id="T_1f94f_row116_col1" class="data row116 col1" >Patent Citations</td>
+      <td id="T_1f94f_row116_col2" class="data row116 col2" >Forward Citation Category</td>
+      <td id="T_1f94f_row116_col3" class="data row116 col3" >Forward citations are references made by later patents or patent applications to an earlier patent or application. They indicate the influence or relevance of the original invention on subsequent developments in the field. Tracking forward citations helps in assessing the technological impact and value of a patent, as a higher number of citations may suggest greater significance or broader applicability of the invention.
+
+Indicates the relevance of the citation. See Citation Source Categories for a list of categories.
+https://www.ificlaims.com/docs/Citation+Source+Categories.htm </td>
+      <td id="T_1f94f_row116_col4" class="data row116 col4" >Patent Citations</td>
+      <td id="T_1f94f_row116_col5" class="data row116 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row117_col0" class="data row117 col0" >Patent Citations</td>
+      <td id="T_1f94f_row117_col1" class="data row117 col1" >Patent Citations</td>
+      <td id="T_1f94f_row117_col2" class="data row117 col2" >Citation Document Number</td>
+      <td id="T_1f94f_row117_col3" class="data row117 col3" >Corresponds to Publication ID in associated Patent Database</td>
+      <td id="T_1f94f_row117_col4" class="data row117 col4" >Patent Citations</td>
+      <td id="T_1f94f_row117_col5" class="data row117 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row118_col0" class="data row118 col0" >Patent Citations</td>
+      <td id="T_1f94f_row118_col1" class="data row118 col1" >Patent Citations</td>
+      <td id="T_1f94f_row118_col2" class="data row118 col2" >Document Number Format</td>
+      <td id="T_1f94f_row118_col3" class="data row118 col3" >Format of the number in terms of Patent Office association</td>
+      <td id="T_1f94f_row118_col4" class="data row118 col4" >Patent Citations</td>
+      <td id="T_1f94f_row118_col5" class="data row118 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row119_col0" class="data row119 col0" >Patent Citations</td>
+      <td id="T_1f94f_row119_col1" class="data row119 col1" >Patent Citations</td>
+      <td id="T_1f94f_row119_col2" class="data row119 col2" >Forward Citation Country</td>
+      <td id="T_1f94f_row119_col3" class="data row119 col3" >Domicile / Office associated to the Citation</td>
+      <td id="T_1f94f_row119_col4" class="data row119 col4" >Patent Citations</td>
+      <td id="T_1f94f_row119_col5" class="data row119 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row120_col0" class="data row120 col0" >Patent Citations</td>
+      <td id="T_1f94f_row120_col1" class="data row120 col1" >Patent Citations</td>
+      <td id="T_1f94f_row120_col2" class="data row120 col2" >Citation Kind Code</td>
+      <td id="T_1f94f_row120_col3" class="data row120 col3" >Kind Code associated to the Cited patent
+
+A kind code is a two-letter code used to identify the stage of publication and the type of document for a patent or patent application, providing insights into its legal status and the patent process phase. Please see refefences of Kind Codes kept via USPTO and EPO
+
+===
+
+https://www.uspto.gov/learning-and-resources/support-centers/electronic-business-center/kind-codes-included-uspto-patent
+
+https://www.epo.org/en/searching-for-patents/data/coverage/regular</td>
+      <td id="T_1f94f_row120_col4" class="data row120 col4" >Patent Citations</td>
+      <td id="T_1f94f_row120_col5" class="data row120 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row121_col0" class="data row121 col0" >Patent Citations</td>
+      <td id="T_1f94f_row121_col1" class="data row121 col1" >Patent Citations</td>
+      <td id="T_1f94f_row121_col2" class="data row121 col2" >Forward Patent Citation Unique ID</td>
+      <td id="T_1f94f_row121_col3" class="data row121 col3" >Effectively the publication reference number of the cited document</td>
+      <td id="T_1f94f_row121_col4" class="data row121 col4" >Patent Citations</td>
+      <td id="T_1f94f_row121_col5" class="data row121 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row122_col0" class="data row122 col0" >Patent Citations</td>
+      <td id="T_1f94f_row122_col1" class="data row122 col1" >Patent Citations</td>
+      <td id="T_1f94f_row122_col2" class="data row122 col2" >Category</td>
+      <td id="T_1f94f_row122_col3" class="data row122 col3" >Indicates the relevance of the citation. See Citation Source Categories for a list of categories.
+https://www.ificlaims.com/docs/Citation+Source+Categories.htm</td>
+      <td id="T_1f94f_row122_col4" class="data row122 col4" >Patent Citations</td>
+      <td id="T_1f94f_row122_col5" class="data row122 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row123_col0" class="data row123 col0" >Patent Citations</td>
+      <td id="T_1f94f_row123_col1" class="data row123 col1" >Patent Citations</td>
+      <td id="T_1f94f_row123_col2" class="data row123 col2" >Citation Country</td>
+      <td id="T_1f94f_row123_col3" class="data row123 col3" >Domicile / Office associated to the Citation</td>
+      <td id="T_1f94f_row123_col4" class="data row123 col4" >Patent Citations</td>
+      <td id="T_1f94f_row123_col5" class="data row123 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row124_col0" class="data row124 col0" >Patent Citations</td>
+      <td id="T_1f94f_row124_col1" class="data row124 col1" >Patent Citations</td>
+      <td id="T_1f94f_row124_col2" class="data row124 col2" >Patent Ciation Unique ID</td>
+      <td id="T_1f94f_row124_col3" class="data row124 col3" >Effectively the publication reference number of the cited document</td>
+      <td id="T_1f94f_row124_col4" class="data row124 col4" >Patent Citations</td>
+      <td id="T_1f94f_row124_col5" class="data row124 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row125_col0" class="data row125 col0" >Non-Patent Citations</td>
+      <td id="T_1f94f_row125_col1" class="data row125 col1" >Non-Patent Citations</td>
+      <td id="T_1f94f_row125_col2" class="data row125 col2" >Detail</td>
+      <td id="T_1f94f_row125_col3" class="data row125 col3" >Historical patent citations refer to references made to previously published patents and patent applications within the documentation of a current patent application or granted patent. These citations are used to acknowledge prior art and innovations that relate to the current invention, demonstrating how it builds upon or differentiates from existing technology. Historical citations provide a context for evaluating the novelty and non-obviousness of the invention and help in tracing the evolution of technological developments in a particular field.
+
+Unstructured: the text may be a bibliographic reference to a book, journal, thesis, etc.; a reference to a database record; or a "See also" reference to a related publication.
+</td>
+      <td id="T_1f94f_row125_col4" class="data row125 col4" >Non-Patent Citations</td>
+      <td id="T_1f94f_row125_col5" class="data row125 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row126_col0" class="data row126 col0" >Non-Patent Citations</td>
+      <td id="T_1f94f_row126_col1" class="data row126 col1" >Non-Patent Citations</td>
+      <td id="T_1f94f_row126_col2" class="data row126 col2" >Category</td>
+      <td id="T_1f94f_row126_col3" class="data row126 col3" >Indicates the relevance of the citation. See Citation Source Categories for a list of categories.
+https://www.ificlaims.com/docs/Citation+Source+Categories.htm</td>
+      <td id="T_1f94f_row126_col4" class="data row126 col4" >Non-Patent Citations</td>
+      <td id="T_1f94f_row126_col5" class="data row126 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row127_col0" class="data row127 col0" >Legal Events</td>
+      <td id="T_1f94f_row127_col1" class="data row127 col1" >Legal Events</td>
+      <td id="T_1f94f_row127_col2" class="data row127 col2" >Event</td>
+      <td id="T_1f94f_row127_col3" class="data row127 col3" >Legal events in the context of patents refer to any formal actions or procedural steps recorded during the lifecycle of a patent or patent application. These can include filing dates, publication dates, changes in ownership, licensing agreements, payment of maintenance fees, amendments to the application, examination outcomes, granting of the patent, opposition proceedings, and expiration or revocation of rights. Legal events provide a comprehensive history of the legal status and administrative progress of a patent within the patent office.
+
+Description of the legal status code
+</td>
+      <td id="T_1f94f_row127_col4" class="data row127 col4" >Legal Events</td>
+      <td id="T_1f94f_row127_col5" class="data row127 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row128_col0" class="data row128 col0" >Legal Events</td>
+      <td id="T_1f94f_row128_col1" class="data row128 col1" >Legal Events</td>
+      <td id="T_1f94f_row128_col2" class="data row128 col2" >Attributes</td>
+      <td id="T_1f94f_row128_col3" class="data row128 col3" >Attributes of a legal event such as dates, parties, free format text etc.</td>
+      <td id="T_1f94f_row128_col4" class="data row128 col4" >Legal Events</td>
+      <td id="T_1f94f_row128_col5" class="data row128 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row129_col0" class="data row129 col0" >Legal Events</td>
+      <td id="T_1f94f_row129_col1" class="data row129 col1" >Legal Events</td>
+      <td id="T_1f94f_row129_col2" class="data row129 col2" >Impact</td>
+      <td id="T_1f94f_row129_col3" class="data row129 col3" >Is + , -, or neutral</td>
+      <td id="T_1f94f_row129_col4" class="data row129 col4" >Legal Events</td>
+      <td id="T_1f94f_row129_col5" class="data row129 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row130_col0" class="data row130 col0" >Legal Events</td>
+      <td id="T_1f94f_row130_col1" class="data row130 col1" >Legal Events</td>
+      <td id="T_1f94f_row130_col2" class="data row130 col2" >Code</td>
+      <td id="T_1f94f_row130_col3" class="data row130 col3" >1-4 character code. Legal status codes are country-specific. Further information found here: https://www.wipo.int/export/sites/www/standards/en/pdf/03-03-01.pdf
+
+</td>
+      <td id="T_1f94f_row130_col4" class="data row130 col4" >Legal Events</td>
+      <td id="T_1f94f_row130_col5" class="data row130 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row131_col0" class="data row131 col0" >Legal Events</td>
+      <td id="T_1f94f_row131_col1" class="data row131 col1" >Legal Events</td>
+      <td id="T_1f94f_row131_col2" class="data row131 col2" >Event Class</td>
+      <td id="T_1f94f_row131_col3" class="data row131 col3" >Letter designation that groups event codes into categories which are of particular importance to the prosecution of a patent and share a common theme. Class is available in the frontfile beginning in March 2020. See the INPADOC classification scheme for more information.
+
+Some examples include:
+
+C=Application revival, i.e., events related to the revival, reinstatement or restoration of an application after it has been discontinued
+P=Document modification, i.e., events related to modifications of an application, IP right document or other document, which occur outside the context of a pre-grant review or IP right review
+</td>
+      <td id="T_1f94f_row131_col4" class="data row131 col4" >Legal Events</td>
+      <td id="T_1f94f_row131_col5" class="data row131 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row132_col0" class="data row132 col0" >Legal Events</td>
+      <td id="T_1f94f_row132_col1" class="data row132 col1" >Legal Events</td>
+      <td id="T_1f94f_row132_col2" class="data row132 col2" >Event Date</td>
+      <td id="T_1f94f_row132_col3" class="data row132 col3" >Date of public notification (YYYYMMDD), e.g., gazette date</td>
+      <td id="T_1f94f_row132_col4" class="data row132 col4" >Legal Events</td>
+      <td id="T_1f94f_row132_col5" class="data row132 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row133_col0" class="data row133 col0" >Legal Events</td>
+      <td id="T_1f94f_row133_col1" class="data row133 col1" >Legal Events</td>
+      <td id="T_1f94f_row133_col2" class="data row133 col2" >Event Country</td>
+      <td id="T_1f94f_row133_col3" class="data row133 col3" >Legal Event associated Office / Domicile</td>
+      <td id="T_1f94f_row133_col4" class="data row133 col4" >Legal Events</td>
+      <td id="T_1f94f_row133_col5" class="data row133 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row134_col0" class="data row134 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row134_col1" class="data row134 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row134_col2" class="data row134 col2" >No App Published:</td>
+      <td id="T_1f94f_row134_col3" class="data row134 col3" >Contains an "*" (asterisk) for the Euro-PCT applications for which no A-document has been published by the EPO because it was filed with WIPO in one of the official languages of the EPO</td>
+      <td id="T_1f94f_row134_col4" class="data row134 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row134_col5" class="data row134 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row135_col0" class="data row135 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row135_col1" class="data row135 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row135_col2" class="data row135 col2" >EP Limitation Sequence</td>
+      <td id="T_1f94f_row135_col3" class="data row135 col3" >Limitation sequence number</td>
+      <td id="T_1f94f_row135_col4" class="data row135 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row135_col5" class="data row135 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row136_col0" class="data row136 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row136_col1" class="data row136 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row136_col2" class="data row136 col2" >EP Limitation Kind</td>
+      <td id="T_1f94f_row136_col3" class="data row136 col3" >The EP Limitation Kind refers to a procedural aspect within the European Patent (EP) system where a patent holder may request a limitation or amendment of their granted patent. This process allows the patentee to modify the claims of the patent post-grant, typically to narrow their scope. This might be done in response to legal challenges, to comply with regulatory requirements, or to align the patent more closely with the patentee's commercial strategy. The outcomes of such limitation procedures are documented as specific kinds of legal events in the life of the patent, and they can significantly affect the enforceability and scope of patent protection.
+
+Limitation kind:
+
+01=Filed during opposition period
+02=Filed after opposition period
+
+</td>
+      <td id="T_1f94f_row136_col4" class="data row136 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row136_col5" class="data row136 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row137_col0" class="data row137 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row137_col1" class="data row137 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row137_col2" class="data row137 col2" >EP Limitation Decision</td>
+      <td id="T_1f94f_row137_col3" class="data row137 col3" >The "EP Limitation Decision" refers to the formal decision made by the European Patent Office (EPO) regarding a request to limit (narrow) the claims of a granted European patent. This decision can either allow or reject the proposed limitation. If allowed, the claims of the patent are officially amended to reflect the changes requested by the patent owner, which can be a strategic move to avoid invalidation or to clarify the scope of the patent. The decision is a crucial step in the limitation procedure, determining the future enforceability and scope of the patent rights.
+
+Decision code:
+
+01=Admissible
+02=Inadmissible
+03=Deemed not filed
+04=Deemed not filed, opposition pending/filed
+
+</td>
+      <td id="T_1f94f_row137_col4" class="data row137 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row137_col5" class="data row137 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row138_col0" class="data row138 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row138_col1" class="data row138 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row138_col2" class="data row138 col2" >EP Limitation Date</td>
+      <td id="T_1f94f_row138_col3" class="data row138 col3" >The "EP Limitation Date" refers to the date on which a limitation procedure is initiated or formally filed with the European Patent Office (EPO). In the context of European patents, a limitation procedure allows a patent owner to voluntarily amend the claims of their granted patent to narrow their scope. This process can be strategic, such as to strengthen the patent's position against potential invalidity challenges or to comply with legal rulings. The EP Limitation Date marks the starting point of this procedure, from which various deadlines, such as for submitting required documents or paying associated fees, will be calculated.</td>
+      <td id="T_1f94f_row138_col4" class="data row138 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row138_col5" class="data row138 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row139_col0" class="data row139 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row139_col1" class="data row139 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row139_col2" class="data row139 col2" >EP Limitation Payment Date</td>
+      <td id="T_1f94f_row139_col3" class="data row139 col3" >Date of payment</td>
+      <td id="T_1f94f_row139_col4" class="data row139 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row139_col5" class="data row139 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row140_col0" class="data row140 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row140_col1" class="data row140 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row140_col2" class="data row140 col2" >EP Limitation Rejection Kind</td>
+      <td id="T_1f94f_row140_col3" class="data row140 col3" >Rejection of limitation:
+
+01=Substantive refusal
+02=Inadmissible for formal reasons (R. 94)
+03=No/late reply to subset report
+04=RALL (request allowed), requirements not fulfilled</td>
+      <td id="T_1f94f_row140_col4" class="data row140 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row140_col5" class="data row140 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row141_col0" class="data row141 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row141_col1" class="data row141 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row141_col2" class="data row141 col2" >EP Limitation Rejection Bulletin Number</td>
+      <td id="T_1f94f_row141_col3" class="data row141 col3" >The "EP Limitation Rejection Bulletin Number" refers to the specific issue of the European Patent Bulletin in which a decision to reject a limitation request is published. The European Patent Bulletin is an official publication that documents and communicates various legal and procedural events related to European patents and patent applications, including decisions on requests to limit (narrow down) the claims of a granted patent. When a limitation request is rejected by the European Patent Office (EPO), this rejection is made public through the bulletin, and the bulletin number helps stakeholders and interested parties to locate and reference the specific decision.</td>
+      <td id="T_1f94f_row141_col4" class="data row141 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row141_col5" class="data row141 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row142_col0" class="data row142 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row142_col1" class="data row142 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row142_col2" class="data row142 col2" >EP Limitation Rejection Dispatch Date</td>
+      <td id="T_1f94f_row142_col3" class="data row142 col3" >Date decision was dispatched</td>
+      <td id="T_1f94f_row142_col4" class="data row142 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row142_col5" class="data row142 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row143_col0" class="data row143 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row143_col1" class="data row143 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row143_col2" class="data row143 col2" >EP Limitation Rejection Legal Date</td>
+      <td id="T_1f94f_row143_col3" class="data row143 col3" >Date of legal effect</td>
+      <td id="T_1f94f_row143_col4" class="data row143 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row143_col5" class="data row143 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row144_col0" class="data row144 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row144_col1" class="data row144 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row144_col2" class="data row144 col2" >EP Limitation Allowed Dispatch Date</td>
+      <td id="T_1f94f_row144_col3" class="data row144 col3" >Date decision was dispatched</td>
+      <td id="T_1f94f_row144_col4" class="data row144 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row144_col5" class="data row144 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row145_col0" class="data row145 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row145_col1" class="data row145 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row145_col2" class="data row145 col2" >EP Limitation Allowed Translation Date</td>
+      <td id="T_1f94f_row145_col3" class="data row145 col3" >Date translation was received</td>
+      <td id="T_1f94f_row145_col4" class="data row145 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row145_col5" class="data row145 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row146_col0" class="data row146 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row146_col1" class="data row146 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row146_col2" class="data row146 col2" >EP Limitation Allowed Payment Date</td>
+      <td id="T_1f94f_row146_col3" class="data row146 col3" >Date full payment was received</td>
+      <td id="T_1f94f_row146_col4" class="data row146 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row146_col5" class="data row146 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row147_col0" class="data row147 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row147_col1" class="data row147 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row147_col2" class="data row147 col2" >EP Limitation Decision Kind</td>
+      <td id="T_1f94f_row147_col3" class="data row147 col3" >Kind code; when the request is accepted, the result will be a new B3 publication</td>
+      <td id="T_1f94f_row147_col4" class="data row147 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row147_col5" class="data row147 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row148_col0" class="data row148 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row148_col1" class="data row148 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row148_col2" class="data row148 col2" >EP Limitation Decision Bulletin Number</td>
+      <td id="T_1f94f_row148_col3" class="data row148 col3" >The "EP Limitation Decision Bulletin Number" refers to the specific issue of the European Patent Bulletin in which the decision regarding a limitation request is published. The European Patent Bulletin is an official publication that records and announces legal and procedural statuses, decisions, and other relevant information concerning European patents and patent applications. When a limitation request (to narrow the scope of a granted patent's claims) is approved or rejected by the European Patent Office (EPO), the decision is documented in this bulletin, providing official public notice.</td>
+      <td id="T_1f94f_row148_col4" class="data row148 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row148_col5" class="data row148 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row149_col0" class="data row149 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row149_col1" class="data row149 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row149_col2" class="data row149 col2" >EP Limitation Decision Date</td>
+      <td id="T_1f94f_row149_col3" class="data row149 col3" >Date of publication</td>
+      <td id="T_1f94f_row149_col4" class="data row149 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row149_col5" class="data row149 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row150_col0" class="data row150 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row150_col1" class="data row150 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row150_col2" class="data row150 col2" >Review Number</td>
+      <td id="T_1f94f_row150_col3" class="data row150 col3" >Petition for review number (as there can be multiple petitions for review); comprises a unique number for a given year, e.g., R0001/08</td>
+      <td id="T_1f94f_row150_col4" class="data row150 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row150_col5" class="data row150 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row151_col0" class="data row151 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row151_col1" class="data row151 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row151_col2" class="data row151 col2" >Appeal Number</td>
+      <td id="T_1f94f_row151_col3" class="data row151 col3" >Number associated to appeal against the EPO</td>
+      <td id="T_1f94f_row151_col4" class="data row151 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row151_col5" class="data row151 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row152_col0" class="data row152 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row152_col1" class="data row152 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row152_col2" class="data row152 col2" >Petitioner Code</td>
+      <td id="T_1f94f_row152_col3" class="data row152 col3" >Petitioner code</td>
+      <td id="T_1f94f_row152_col4" class="data row152 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row152_col5" class="data row152 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row153_col0" class="data row153 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row153_col1" class="data row153 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row153_col2" class="data row153 col2" >Decision Kind</td>
+      <td id="T_1f94f_row153_col3" class="data row153 col3" >Kind of decision:
+
+R01=Obviously inadmissible
+R02=Obviously unsubstantiated
+R03=Free
+R04=Inadmissible
+R05=Rejection
+R06=Allowed with total refund of review fee
+R07=Allowed with partial refund of review fee
+R08=Free
+R09=Withdrawal
+R10=Deemed to be withdrawn
+R11=Other kind of disposal
+R12=Free</td>
+      <td id="T_1f94f_row153_col4" class="data row153 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row153_col5" class="data row153 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row154_col0" class="data row154 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row154_col1" class="data row154 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row154_col2" class="data row154 col2" >Notice Date</td>
+      <td id="T_1f94f_row154_col3" class="data row154 col3" >Date of notice of petition</td>
+      <td id="T_1f94f_row154_col4" class="data row154 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row154_col5" class="data row154 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row155_col0" class="data row155 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row155_col1" class="data row155 col1" >EPO Specific Data</td>
+      <td id="T_1f94f_row155_col2" class="data row155 col2" >Decision Date</td>
+      <td id="T_1f94f_row155_col3" class="data row155 col3" >Date of decision</td>
+      <td id="T_1f94f_row155_col4" class="data row155 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row155_col5" class="data row155 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row156_col0" class="data row156 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row156_col1" class="data row156 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row156_col2" class="data row156 col2" >Adverse Decisions</td>
+      <td id="T_1f94f_row156_col3" class="data row156 col3" >Adverse decisions against a Patent by the US Patents and Trademarks Office</td>
+      <td id="T_1f94f_row156_col4" class="data row156 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row156_col5" class="data row156 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row157_col0" class="data row157 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row157_col1" class="data row157 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row157_col2" class="data row157 col2" >Correction Certificate</td>
+      <td id="T_1f94f_row157_col3" class="data row157 col3" >A Correction Certificate is an official document issued by a patent office that rectifies errors or inaccuracies in a previously granted patent. These corrections can pertain to typographical mistakes, errors in the inventor's name or address, inaccuracies in diagrams or descriptions, or other minor details that do not alter the scope of the patent claims. The issuance of a Correction Certificate ensures the patent document accurately reflects the invention as intended by the patent holder.</td>
+      <td id="T_1f94f_row157_col4" class="data row157 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row157_col5" class="data row157 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row158_col0" class="data row158 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row158_col1" class="data row158 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row158_col2" class="data row158 col2" >US Disclaimers</td>
+      <td id="T_1f94f_row158_col3" class="data row158 col3" >Disclaimer statements</td>
+      <td id="T_1f94f_row158_col4" class="data row158 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row158_col5" class="data row158 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row159_col0" class="data row159 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row159_col1" class="data row159 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row159_col2" class="data row159 col2" >US Expirations</td>
+      <td id="T_1f94f_row159_col3" class="data row159 col3" >Patent expirations</td>
+      <td id="T_1f94f_row159_col4" class="data row159 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row159_col5" class="data row159 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row160_col0" class="data row160 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row160_col1" class="data row160 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row160_col2" class="data row160 col2" >US Extensions</td>
+      <td id="T_1f94f_row160_col3" class="data row160 col3" >Patent extensions</td>
+      <td id="T_1f94f_row160_col4" class="data row160 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row160_col5" class="data row160 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row161_col0" class="data row161 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row161_col1" class="data row161 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row161_col2" class="data row161 col2" >US Reeaxminations</td>
+      <td id="T_1f94f_row161_col3" class="data row161 col3" >Patent reexaminations</td>
+      <td id="T_1f94f_row161_col4" class="data row161 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row161_col5" class="data row161 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row162_col0" class="data row162 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row162_col1" class="data row162 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row162_col2" class="data row162 col2" >US Reinstatements</td>
+      <td id="T_1f94f_row162_col3" class="data row162 col3" >Patent reinstatements</td>
+      <td id="T_1f94f_row162_col4" class="data row162 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row162_col5" class="data row162 col5"   >--</td>
+    </tr>
+    <tr>
+      <td id="T_1f94f_row163_col0" class="data row163 col0" >Office Specific Data</td>
+      <td id="T_1f94f_row163_col1" class="data row163 col1" >USPTO Specific Data</td>
+      <td id="T_1f94f_row163_col2" class="data row163 col2" >US Reissues</td>
+      <td id="T_1f94f_row163_col3" class="data row163 col3" >Patent reissues</td>
+      <td id="T_1f94f_row163_col4" class="data row163 col4" >Office Specific Data</td>
+      <td id="T_1f94f_row163_col5" class="data row163 col5"   >--</td>
+    </tr>
+  </tbody>
+</table>
+
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('.table').DataTable({
+                "paging": false,
+                "info": false
+            });
+        } );
+    </script>
+    </body>
+    </html>
+    
